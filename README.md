@@ -44,11 +44,10 @@ kubectl get pods -A
 ### Create the master join token on the master node
 
 ```shell
-kubeadm token create
-kubeadm token create — print-join-command
+kubeadm token create --print-join-command
 ```
 
-Worker Node Type
+Worker Node paste generated command
 
 ```shell
 kubeadm join <MasterNode_IP>:6443 — token <YOUR_TOKEN> \
@@ -63,6 +62,17 @@ kubectl get nodes
 
 ---
 
+## For k3d
+
+### Run Script Just one step
+
+```shell=
+sh install_k3d.sh
+```
+
+---
+
 ## Reference
 
 1. [Medium - Simplifying Kubernetes Installation on Ubuntu using a Bash Shell Script](https://medium.com/@olorunfemikawonise_56441/simplifying-kubernetes-installation-on-ubuntu-using-a-bash-shell-script-d75fed68a31)
+2. [IThome - Day 2 本機環境安裝 K3D & kubectl](https://ithelp.ithome.com.tw/articles/10319629)
